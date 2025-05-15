@@ -1,26 +1,6 @@
-# Simple-App-development-with-Ansible
 # 🚀 Flask App Deployment with Docker, Ansible & Kubernetes
 
 A simple Python Flask web application that is containerized using Docker and deployed to a Kubernetes cluster using Ansible automation.
-
----
-
-## 📦 Project Structure
-
-flask-k8s-project/
-├── app/
-│ ├── app.py # Flask application
-│ ├── Dockerfile # Docker build file
-├── ansible/
-│ ├── inventory # Ansible inventory file (with your Kubernetes node IP)
-│ ├── build-image.yml # Ansible playbook to build and push Docker image
-│ ├── deploy-to-k8s.yml # Ansible playbook to deploy app to Kubernetes
-├── k8s/
-│ ├── deployment.yml # Kubernetes Deployment manifest
-│ ├── service.yml # Kubernetes Service manifest
-├── requirements.txt # Python dependencies
-├── README.md
-
 
 ---
 
