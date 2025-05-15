@@ -1,0 +1,13 @@
+- name: Build and Push Flask Docker Image
+  hosts: master
+  become: yes
+  tasks:
+    - name: Build Docker image
+      shell: docker build -t pneel0931/flask-app:latest ../app
+
+    - name: Login to DockerHub
+      shell: echo "Neel@1234." | docker login -u pneel0931 --password-stdin
+
+    - name: Push Docker image
+      shell: docker push pneel0931/flask-app:latest
+

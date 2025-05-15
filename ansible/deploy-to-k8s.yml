@@ -1,0 +1,14 @@
+- name: Deploy Flask app to Kubernetes
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Apply Deployment YAML
+      shell: kubectl apply -f k8s/deployment.yml
+      args:
+        chdir: "{{ playbook_dir }}/.."
+
+    - name: Apply Service YAML
+      shell: kubectl apply -f k8s/service.yml
+      args:
+        chdir: "{{ playbook_dir }}/.."
+
