@@ -3,11 +3,11 @@
   become: yes
   tasks:
     - name: Build Docker image
-      shell: docker build -t pneel0931/flask-app:latest ../app
+      shell: docker build -t dockerhub_ID/flask-app:latest ../app
 
     - name: Login to DockerHub
-      shell: echo "Neel@1234." | docker login -u pneel0931 --password-stdin
+      shell: echo "dockerhub_password" | docker login -u dockerhub_ID --password-stdin
 
     - name: Push Docker image
-      shell: docker push pneel0931/flask-app:latest
+      shell: docker push dockerhub_ID/flask-app:latest
 
